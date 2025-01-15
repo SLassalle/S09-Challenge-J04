@@ -1,6 +1,6 @@
 FROM ubuntu:24.04
 
-RUN apt update && apt install --no-cache -y cowsay
+RUN apt update && apt install -y cowsay && rm -rf /var/lib/apt
 
 ENTRYPOINT ["/usr/games/cowsay"]
 
