@@ -3,8 +3,8 @@
 name: try docker build & push image
 
 on:
+  workflow_dispatch:
   push:
-    branches: main
 
 env:
   REGISTRY: docker.io
@@ -48,4 +48,3 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
-          
