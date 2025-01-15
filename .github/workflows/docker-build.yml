@@ -33,7 +33,7 @@ jobs:
             ${{ env.REGISTRY  }}/${{ env.IMAGE_NAME  }}
           tags: |
             type=semver,pattern={{version}}
-            type=semver,pattern={{major}},{{minor}}
+            type=semver,pattern={{major}}.{{minor}}
 
       # Configure Docker pour se connecter à DockerHub
 
